@@ -1,0 +1,97 @@
+#+TITLE: Practica 1
+#+Author: Luis Eduardo Galindo Amaya
+#+email:  egalindo54@uabc.edu.mx
+
+#+DESCRIPTION:
+#+KEYWORDS: 
+#+LANGUAGE: es
+#+DATE: \today
+
+#+OPTIONS: \n:t num:1 toc:nil title:nil 
+
+#+LATEX_COMPILER: pdflatex
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS:
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage{svg,listings}
+
+#+BEGIN_EXPORT latex
+\begin{titlepage}
+\centering
+{\bfseries\LARGE Universidad Autonoma \par de Baja California \par}
+\vspace{1cm}
+{\scshape\Large Interacción Humano-Computadora \par}
+\vspace{2cm}
+{\scshape\Huge Introduccion a pygame  \par}
+\vspace{2cm}
+{\itshape\Large Practica 1 \par}
+\vfill
+\begin{center}
+\includegraphics[width=4cm]{img/logo}
+\end{center}
+\vfill
+{\Large Autor: \par}
+{\Large Luis E. Galindo Amaya \par}
+{\Large 1274895 \par}
+\vfill
+{\Large \today \par}
+\end{titlepage}
+#+END_EXPORT
+
+* Capturas
+Hice un pequeño demo con pygame, solamente mueve sprites en pantalla y tiene coliciones sencillas implementadas, nunca en mi vida habia trabajado con pygame asi que este demo es extremadamente sencillo.
+[[file:img/15-2.png]]
+
+** Link al Programa:
+https://github.com/Galindo-lab/IHC-2022/tree/master/2022-02-13
+
+* Pygame
+Pygame tiene algunas funciones para trabajar con sprites y con imagenes, ademas de un sistema de coliciones muy sencillo.
+
+- Sprites    :: Los sprites son una clase en pygame, tienen una imagen, tamaño y algunos metodos comunes para trabajarlos ademas de un sistema de coliciones sencillo.
+
+- Group      :: Un grupo de sprites puede compartir comportamientos comunes, por lo que el objeto group puede facilitar programar un conjunto de elementos.
+
+- Delta Time :: El tiempo delta o 'frame independece' es un valor que marca la diferencia entre los frames de un juego, esto permite mantener la consistencia independientemente de las caracterisicas del sistema.
+
+* Problema
+Dado un arreglo de números enteros nums, para cada elemento /nums[i]/ encontrar cuántos números en el arreglo son menores que dicho elemento. Regresar el resultado en un arreglo.
+
+** Version corta
+#+BEGIN_SRC python 
+  # CODE -----------------------------------------------------------
+  nums = [8,1,2,2,3]              # arreglo a evaluar
+
+  print( [len([y for y in nums if y < x]) for x in nums] )
+
+  # OUTPUT ---------------------------------------------------------
+
+  [4,0,1,1,3]
+
+#+END_SRC
+
+
+
+** Version con explicacion
+#+BEGIN_SRC python :exports code
+  # CODE -----------------------------------------------------------
+
+  nums = [8,1,2,2,3]              # arreglo a evaluar
+
+  def numeros_menores(v: int, l: "list") -> "list":
+      """ Retorna una lista con los valores menores a 'v'
+
+      Parámetros:
+          v -- valor a evaluar
+          b -- Lista a comparar
+
+      """
+      return [x for x in l if x < v]
+
+  return( [len(numeros_menores(x, nums)) for x in nums] )
+
+  # OUTPUT ---------------------------------------------------------
+
+  [4,0,1,1,3]
+
+#+END_SRC
