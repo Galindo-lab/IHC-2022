@@ -1,0 +1,68 @@
+#+TITLE: Práctica 2
+#+Author: Luis Eduardo Galindo Amaya
+#+email:  egalindo54@uabc.edu.mx
+
+#+DESCRIPTION:
+#+KEYWORDS: 
+#+LANGUAGE: es
+#+DATE: \today
+
+#+OPTIONS: \n:t num:1 toc:nil title:nil 
+
+#+LATEX_COMPILER: pdflatex
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS:
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage{svg,listings}
+
+#+BEGIN_EXPORT latex
+\begin{titlepage}
+\centering
+{\bfseries\LARGE Universidad Autonoma \par de Baja California \par}
+\vspace{1cm}
+{\scshape\Large Interacción Humano-Computadora \par}
+\vspace{2cm}
+{\scshape\Huge Control de versionamiento Git \par}
+\vspace{2cm}
+{\itshape\Large Práctica 2 \par}
+\vfill
+\begin{center}
+\includegraphics[width=4cm]{img/logo}
+\end{center}
+\vfill
+{\Large Autor: \par}
+{\Large Luis E. Galindo Amaya \par}
+{\Large 1274895 \par}
+\vfill
+{\Large \today \par}
+\end{titlepage}
+#+END_EXPORT
+
+* Repositorio
+- IHC-2022 :: https://github.com/Galindo-lab/IHC-2022
+
+* Preguntas
+** ¿Qué es Git?
+
+** ¿Qué es un commit?
+
+** ¿Qué es un branch?
+
+** ¿Qué es un merge?
+
+** Describa el funcionamiento de fetch, pull y push.
+
+
+* Problema
+Dado un arreglo de números enteros nums y un entero target, implementar una función que regrese los indices de dos números que sumados den como resultado el target. Asumir que siempre habrá al menos una solución, y tampoco se puede repetir el mismo elemento más de una vez. La respuesta se puede regresar en cualquier orden.
+
+#+BEGIN_SRC 
+public int[] SumaDos(int[] nums, int target) {}
+Ejemplo:
+Input: nums = [2,7,11,15], target = 18
+Output = [1, 2]
+#+END_SRC
+
+BONUS: Indicar la complejidad en espacio y tiempo.
+
+* Comentarios Y Conclusiones
