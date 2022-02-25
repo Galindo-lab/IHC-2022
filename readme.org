@@ -1,6 +1,6 @@
 
 * Interacción Humano-Cumputadora
-Portafolio de la materia IHC de UABC 2022x
+Portafolio de la materia IHC de UABC 2022.
 
-* TOC
+** TOC
 - [2022-02-13 dom] Clon de Space Invaders
