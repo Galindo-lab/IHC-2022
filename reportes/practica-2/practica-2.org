@@ -43,15 +43,26 @@
 
 * Preguntas
 ** ¿Qué es Git?
+Git es una herramienta que controla versiones de código de forma distribuida. Su propósito es llevar registro de los cambios en archivos de computadora incluyendo coordinar el trabajo que varias personas realizan sobre archivos compartidos en un repositorio de código.
 
 ** ¿Qué es un commit?
+un commit es cuando ponemos las actualizaciones mas rercientes de un documento en la rama en la que se cuentre.
 
 ** ¿Qué es un branch?
+Una rama representa una línea independiente de desarrollo. Las ramas sirven como una abstracción de los procesos de cambio, preparación y confirmación. Puedes concebirlas como una forma de solicitar un nuevo directorio de trabajo, un nuevo entorno de ensayo o un nuevo historial de proyecto
 
 ** ¿Qué es un merge?
+La fusión es la forma que tiene Git de volver a unir un historial bifurcado. El comando git merge permite tomar las líneas independientes de desarrollo creadas por git branch e integrarlas en una sola rama.
 
 ** Describa el funcionamiento de fetch, pull y push.
+*** git fetch
+Descarga los cambios realizados en el repositorio remoto.
 
+*** git pull
+Unifica los comandos fetch y merge en un único comando.
+
+*** git push origin <nombre_rama>:
+Sube la rama “nombre_rama” al servidor remoto.
 
 * Problema
 Dado un arreglo de números enteros nums y un entero target, implementar una función que regrese los indices de dos números que sumados den como resultado el target. Asumir que siempre habrá al menos una solución, y tampoco se puede repetir el mismo elemento más de una vez. La respuesta se puede regresar en cualquier orden.
