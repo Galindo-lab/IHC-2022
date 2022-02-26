@@ -76,4 +76,22 @@ Output = [1, 2]
 
 BONUS: Indicar la complejidad en espacio y tiempo.
 
+** Implementacion
+
+#+BEGIN_SRC 
+nums = [2,7,11,15]
+target = 10
+
+
+def sumaDos(nums, target):
+    for i, v in enumerate(nums):
+        missing = target - v
+        if missing < 0: pass
+        for j, w in enumerate(nums):
+            if w == missing: return (i,j)
+        
+    
+print(sumaDos(nums, target))
+#+END_SRC
+
 * Comentarios Y Conclusiones
