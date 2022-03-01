@@ -1,5 +1,5 @@
 import pygame, time
-import conf as conf
+from conf import *
 
 pygame.init()
 pygame.display.set_caption( WINDOW_TITLE )
@@ -12,3 +12,8 @@ running = True
 
 while running:
     dt = clock.tick(60) * .001 * TARGET_FPS
+    
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
