@@ -16,19 +16,28 @@ class Player(pygame.sprite.Sprite):
         
 
     def update(self, dt):
-        self.position += self.change * dt
-        self.change.x = 0
-        self.change.y = 0
+        self.input()
+        
+        self.position += self.change * self.max_speed * dt
+        self.rect.x = self.position.x
+        self.rect.y = self.position.y
+
+        self.change.x,self.change.y = 0, 0
         pass
 
-    def move_left(self):
-        self.change.x = -self.max_speed
+    def input(self):
+        keys = pygame.key.get_pressed()
+        
+        if keys[pygame.K_UP]:
+            self.change.y = -1
+        elif keys[pygame.K_DOWN]:
+            self.change.y = 1
+        else:
+            self.change.y = 0
 
-    def move_right(self):
-        self.change.x = self.max_speed
-
-    def move_up(self):
-        self.change.y = -self.max_speed
-
-    def move_down(self):
-        self.change.y = -self.max_speed
+        if keys[pygame.K_LEFT]:
+            self.change.x = -1
+        elif keys[pygame.K_RIGHT]:
+            self.change.x = 1
+        else:
+            self.change.x = 0

@@ -25,8 +25,11 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
+
+    canvas.fill( (0,0,0) )
+            
     player.update(dt)
     player.draw(canvas)
-
+    
     window.blit(canvas, (0,0))
     pygame.display.update()
