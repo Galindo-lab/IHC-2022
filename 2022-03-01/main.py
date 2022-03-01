@@ -1,6 +1,10 @@
 import pygame, time
 from conf import *
 
+import src.player import Player
+
+
+
 pygame.init()
 pygame.display.set_caption( WINDOW_TITLE )
 
@@ -10,6 +14,10 @@ clock = pygame.time.Clock()
 running = True
 
 
+player = Player(100,100)
+
+
+
 while running:
     dt = clock.tick(60) * .001 * TARGET_FPS
     
@@ -17,3 +25,8 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
+    player.update(dt)
+    player.draw(canvas)
+
+    window.blit(canvas, (0,0))
+    pygame.display.update()
