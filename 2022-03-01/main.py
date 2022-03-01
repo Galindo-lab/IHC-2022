@@ -1,7 +1,7 @@
 import pygame, time
 from conf import *
 
-import src.player import Player
+from src.Player import Player
 
 
 
