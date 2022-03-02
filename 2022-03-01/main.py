@@ -2,10 +2,12 @@ import pygame, time
 from conf import *
 
 from src.Player import Player
-
+from src.Npc import Npc
 
 
 pygame.init()
+pygame.font.init() 
+
 pygame.display.set_caption( WINDOW_TITLE )
 
 window = pygame.display.set_mode( WINDOW_DIMENSION )
@@ -15,7 +17,7 @@ running = True
 
 
 player = Player(100,100)
-
+npc = Npc(200,200)
 
 
 while running:
@@ -27,9 +29,14 @@ while running:
 
 
     canvas.fill( (0,0,0) )
-            
-    player.update(dt)
     player.draw(canvas)
+    npc.draw(canvas)
+    
+    player.update(dt)
+    npc.update(dt)
+
+    if player.rect.colliderect(npc.interaction_area):
+        npc.show_message()
     
     window.blit(canvas, (0,0))
     pygame.display.update()
