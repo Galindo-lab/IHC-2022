@@ -37,6 +37,9 @@ while running:
 
     if player.rect.colliderect(npc.interaction_area):
         npc.show_message()
+        npc.color = (0,0,255)
+    else:
+        npc.color = (255,255,255)
     
     window.blit(canvas, (0,0))
     pygame.display.update()

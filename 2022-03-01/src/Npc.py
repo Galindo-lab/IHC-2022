@@ -9,7 +9,7 @@ class Npc():
         
         self.position = pygame.math.Vector2(x,y)
         self.rect = pygame.Rect( (x,y), (40,40) )
-        self.interaction_area = pygame.Rect( (x,y), (60,60) )
+        self.interaction_area = self.rect.inflate(75,75)
         self.color = (255,255,255)
         self.message_visible = False
 

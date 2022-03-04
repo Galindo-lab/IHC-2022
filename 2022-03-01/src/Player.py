@@ -21,7 +21,7 @@ class Player(pygame.sprite.Sprite):
         self.position += self.change * self.max_speed * dt
         self.rect.x = self.position.x
         self.rect.y = self.position.y
-
+g
         self.change.x,self.change.y = 0, 0
         pass
 

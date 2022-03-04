@@ -26,9 +26,9 @@ https://github.com/Galindo-lab
 \pagebreak
 
 * Descripción
-- Transform :: 
-- Collider (Box, Sphere, etc) ::
-- Rigidbody :: 
+-                   Transform :: Transform sirve para hacer "transformaciones a un objeto" como rotar, girar etc. en pygame "tranasform" solo sirve para manipular el color ó alguna caracteristica de la imagen.
+- Collider (Box, Sphere, etc) :: en pygame colider no tiene ningun homonimo, las coliciones en pygame estan gestionadas por "rects" que un objeto bidimencional que representa una superficie plana.
+-                   Rigidbody :: Pygame no cuenta con un sistema de fisicas incopordo por defecto, podemos implementar esta funcion por medio de Box2D.
 
 * Capturas
 
