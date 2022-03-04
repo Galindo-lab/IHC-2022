@@ -1,0 +1,58 @@
+
+#+TITLE:  Práctica 3
+#+Author: Luis E. Galindo Amaya
+#+email:  egalindo54@uabc.edu.mx
+#+DATE:   \today
+
+#+SUBTITLE: DISEÑO DE INTERACCIONES
+#+DESCRIPTION:
+#+KEYWORDS: 
+#+LANGUAGE: es
+
+#+OPTIONS: \n:t num:1 title:t
+
+#+LATEX_COMPILER: pdflatex
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS:
+#+LATEX_HEADER: \usepackage[spanish]{babel}
+#+LATEX_HEADER: \usepackage{svg,listings}
+
+
+
+\vfill
+#+BEGIN_CENTER
+https://github.com/Galindo-lab
+#+END_CENTER
+\pagebreak
+
+* Descripción
+- Transform :: 
+- Collider (Box, Sphere, etc) ::
+- Rigidbody :: 
+
+* Capturas
+
+* Problema
+Dado un arreglo de números enteros nums, encontrar el sub-arreglo de elementos contiguos (con al menos un elemento) cuya suma sea la mayor entre los demás sub-arreglos, implementar una función que retorné esa suma.
+
+** Ejemplo
+#+BEGIN_SRC 
+Nums = [-2,1,-3,4,-1,2,1,-5,4] -> (4, -1, 2, 1)
+Sum = 6
+Nums = [1]
+Sum = 1
+#+END_SRC
+
+** Implementacion
+#+BEGIN_SRC python
+  def kadane(array):
+      maximo_total = 0
+      maximo_actual = 0
+      for v in array:
+          maximo_actual = max(v, maximo_actual+v)
+          if maximo_actual > maximo_total:
+              maximo_total = maximo_actual
+      return maximo_total
+#+END_SRC
+
+* Comentarios Y Conclusiones 
