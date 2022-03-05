@@ -1,10 +1,13 @@
+#+LATEX_CLASS: report
+#+LATEX_CLASS_OPTIONS: [a4paper]
+# #+LATEX_HEADER: \usepackage{times}
 
-#+TITLE:  Práctica 3
+#+TITLE:  Diseño De Interacciones
 #+Author: Luis E. Galindo Amaya
 #+email:  egalindo54@uabc.edu.mx
 #+DATE:   \today
 
-#+SUBTITLE: DISEÑO DE INTERACCIONES
+#+SUBTITLE: PRÁCTICA 3 
 #+DESCRIPTION:
 #+KEYWORDS: 
 #+LANGUAGE: es
@@ -16,34 +19,60 @@
 #+LATEX_CLASS_OPTIONS:
 #+LATEX_HEADER: \usepackage[spanish]{babel}
 #+LATEX_HEADER: \usepackage{svg,listings}
+#+latex_header: \usepackage{fancyhdr} 
+#+latex_header: \usepackage{fancyvrb}
+#+latex_header: \usepackage{tcolorbox}
+
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Practica 3}
+\lhead{Diseño De Interacciones}
+\cfoot{\thepage}
 
 
 
 \vfill
 #+BEGIN_CENTER
+Matricula: 1274895
 https://github.com/Galindo-lab
 #+END_CENTER
 \pagebreak
 
-* Descripción
--                   Transform :: Transform sirve para hacer "transformaciones a un objeto" como rotar, girar etc. en pygame "tranasform" solo sirve para manipular el color ó alguna caracteristica de la imagen.
-- Collider (Box, Sphere, etc) :: en pygame colider no tiene ningun homonimo, las coliciones en pygame estan gestionadas por "rects" que un objeto bidimencional que representa una superficie plana.
--                   Rigidbody :: Pygame no cuenta con un sistema de fisicas incopordo por defecto, podemos implementar esta funcion por medio de Box2D.
 
 * Capturas
+Repo de github:
+
+https://github.com/Galindo-lab/IHC-2022/tree/master/2022-03-01
+
+El jugador se puede mover por toda la pantalla.
+#+attr_latex: :width 300px
+[[file:img/1.png]]
+
+Pero si se encuentra en área de interacción y pulsa la tecla 'a' muestra un mensaje.
+#+attr_latex: :width 300px
+[[file:img/2.png]]
+
+\pagebreak
+
+* Descripción
+-                   Transform :: Transform sirve para hacer "transformaciones a un objeto" como rotar, girar etc. en pygame "tranasform" solo sirve para manipular el color ó alguna característica de la imagen.
+- Collider (Box, Sphere, etc) :: en pygame colider no tiene ningún homónimo, las coliciones en pygame están gestionadas por "rects" que un objeto bidimensional que representa una superficie plana.
+-                   Rigidbody :: Pygame no cuenta con un sistema de físicas incorporado por defecto, podemos implementar esta función por medio de Box2D.
 
 * Problema
 Dado un arreglo de números enteros nums, encontrar el sub-arreglo de elementos contiguos (con al menos un elemento) cuya suma sea la mayor entre los demás sub-arreglos, implementar una función que retorné esa suma.
 
-** Ejemplo
-#+BEGIN_SRC 
-Nums = [-2,1,-3,4,-1,2,1,-5,4] -> (4, -1, 2, 1)
-Sum = 6
-Nums = [1]
-Sum = 1
-#+END_SRC
+#+ATTR_LATEX: :options [title={Ejemplos}]
+#+BEGIN_tcolorbox
+Nums = [-2,1,-3,4,-1,2,1,-5,4] \rightarrow (4, -1, 2, 1) \\
+output: 6  \\
 
-** Implementacion
+input: [1] \rightarrow (1)  \\
+output: 1
+#+END_tcolorbox
+
+** Implementación
 #+BEGIN_SRC python
   def kadane(array):
       maximo_total = 0
@@ -55,4 +84,7 @@ Sum = 1
       return maximo_total
 #+END_SRC
 
+\pagebreak
+
 * Comentarios Y Conclusiones 
+Es indispensable cuando trabajamos en videojuegos contar con eventos para que nuestro usuario interactué con ellos, sin eventos la experiencia se vuelve muy poco interesante. 
