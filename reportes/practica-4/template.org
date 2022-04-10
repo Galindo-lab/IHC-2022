@@ -1,0 +1,24 @@
+#+TITLE:    Práctica 4
+#+SUBTITLE: Aplicaciones móviles de Realidad Virtua
+
+#+Author:   Luis Eduardo Galindo Amaya
+#+email:    egalindo54@uabc.edu.mx
+#+DATE:     [2022-03-28 lun]
+
+#+INCLUDE: "../0imports/portada.org" 
+#+INCLUDE: "../0imports/codigo.org" 
+
+#+OPTIONS: num:nil
+# #+TOC: headlines 2
+
+* Limitaciones
+Debido a que no me es posible usar el motor unity en linux he tenido que tratar de hace lo posible en pygame, la practica sera un poco mas sencilla pero intente hacer todo lo posible por hacerla funcionar.
+
+* Metas de la practica
+1. El usuario deberá poder interactuar con objetos en escena haciendo uso solamente del enfoque visual.
+2. El usuario deberá poder desplazarse dentro de la escena (interact - teleport).
+3. La interacción con objetos se deberá activar de forma automática mediante un temporizador.
+4. El escenario y objetos de interacción deberán ser distintos a los de la escena de demo.
+
+* Captura de la practica
+[[file:img/Captura%20de%20pantalla%20de%202022-04-10%2016-57-38.png]]
