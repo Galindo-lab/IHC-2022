@@ -14,6 +14,8 @@
 * Limitaciones
 Debido a que no me es posible usar el motor unity en linux he tenido que tratar de hace lo posible en pygame, la practica sera un poco mas sencilla pero intente hacer todo lo posible por hacerla funcionar.
 
+- Repositorio :: [[https://github.com/Galindo-lab/IHC-2022]]
+
 * Metas de la practica
 1. El usuario deberá poder interactuar con objetos en escena haciendo uso solamente del enfoque visual.
 2. El usuario deberá poder desplazarse dentro de la escena (interact - teleport).
@@ -21,4 +23,4 @@ Debido a que no me es posible usar el motor unity en linux he tenido que tratar 
 4. El escenario y objetos de interacción deberán ser distintos a los de la escena de demo.
 
 * Captura de la practica
-[[file:img/Captura%20de%20pantalla%20de%202022-04-10%2016-57-38.png]]
+[[file:img/a.png]]
